@@ -9,9 +9,7 @@ import File from '../models/File';
 class MeetupController {
   async index(req, resp) {
     const { date, page = 1, limit = 10 } = req.query;
-    const where = {
-      user_id: req.userId,
-    };
+    const where = {};
 
     if (date) {
       const formattedDate = parseISO(date);
